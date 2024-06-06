@@ -31,11 +31,6 @@ jobs:
           should_push: false
 
           
-      - name: Get artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: "mijn-diagram"
-          path: ""
-          should_push: false
+ 
 
           
