@@ -20,7 +20,6 @@ jobs:
         id: make_diagram
         uses: githubocto/repo-visualizer@0.7.1     
         with:
-          
           should_push: false
 
       
