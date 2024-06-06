@@ -1,0 +1,2 @@
+Eerst gaan we de documentatie bekijken en nemen we de standaard workflow over vanuit een gewoon project.
+Vervolgens gooi ik volgende code hierin: 
