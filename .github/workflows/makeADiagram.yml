@@ -33,5 +33,6 @@ jobs:
         with:
           name: "mijn-diagram"
           path: ""
+          should_push: false
 
           
