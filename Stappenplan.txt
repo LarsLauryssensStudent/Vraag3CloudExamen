@@ -1,2 +1,37 @@
 Eerst gaan we de documentatie bekijken en nemen we de standaard workflow over vanuit een gewoon project.
 Vervolgens gooi ik volgende code hierin: 
+name: JS - Unit Tests
+
+on: push
+---dus wanneer we pushen
+jobs:
+---de jobs om uit te voeren
+  run-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code ---eerst de code bekijken
+        uses: actions/checkout@master
+      - name: Update diagram --- dan een diagram maken en updaten
+        uses: githubocto/repo-visualizer@0.7.1
+        with:
+          excluded_paths: "dist,node_modules" -- deze mappen tellen niet mee
+          should_push: false --- er moet geen nieuwe push gebeuren
+          artifact_name: "output-diagram" --- de naam voor het artifact anders word er geen gemaakt
+          output_file: ${{ steps.make_diagram.outputs.svg }} --- waar dit artifact terecht moet komen.
+
+De workflow werkt foutloos nu en ik kan de artifact downloaden bij de summary na de workflowrun
+
+Ik heb even stevig de documentatie moeten nakijken omdat ik errors kreeg
+dit was omdat ik artifact gebruikte ipv artifact_name
+nu werkt het dus perfect!
+
+
+    
+
+      
+          
+ 
+
+          
