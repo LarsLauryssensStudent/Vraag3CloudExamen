@@ -16,7 +16,7 @@ jobs:
         with:
           excluded_paths: "dist,node_modules"
           should_push: false
-          artifact: "output-diagram"
+          artifact_name: "output-diagram"
           output_file: ${{ steps.make_diagram.outputs.svg }}
 
 
