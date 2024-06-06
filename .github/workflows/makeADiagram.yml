@@ -32,6 +32,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: "mijn-diagram"
-          path: "downloads"
+          path: ""
 
           
