@@ -19,6 +19,12 @@ jobs:
           artifact: "output-diagram.svg"
           output_file: "output-diagram.svg"
           path: ${{ steps.make_diagram.outputs.svg }}
+
+      - name: Get artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: "my-diagram"
+          path: ${{ steps.make_diagram.outputs.svg }}
     
 
       
