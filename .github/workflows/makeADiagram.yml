@@ -9,9 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v2
-    
       - name: Checkout code
         uses: actions/checkout@master
       - name: Update diagram
@@ -23,8 +20,7 @@ jobs:
 
       - name: Update diagram
         id: make_diagram
-        uses: githubocto/repo-visualizer@0.7.1
-        
+        uses: githubocto/repo-visualizer@0.7.1     
         with:
           artifact_name: "mijn-diagram"
           should_push: false
