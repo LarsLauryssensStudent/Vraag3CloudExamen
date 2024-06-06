@@ -16,8 +16,6 @@ jobs:
         with:
           excluded_paths: "dist,node_modules"
       
-  
-
       - name: Update diagram
         id: make_diagram
         uses: githubocto/repo-visualizer@0.7.1     
@@ -25,6 +23,7 @@ jobs:
           artifact_name: "mijn-diagram"
           should_push: false
 
+      
           
  
 
