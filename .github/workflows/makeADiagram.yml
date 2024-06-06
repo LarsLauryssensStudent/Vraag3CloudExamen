@@ -16,7 +16,9 @@ jobs:
         with:
           excluded_paths: "dist,node_modules"
           should_push: false
-          artifact: "test.svg"
+          artifact: "output-diagram.svg"
+          output_file: "output-diagram.svg"
+    
 
       
           
